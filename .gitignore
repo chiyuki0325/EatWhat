@@ -1,0 +1,6 @@
+.idea/
+venv/
+web/images/*
+web/member_list.js
+.env
+EatWhat.session

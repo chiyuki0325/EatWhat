@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>今天吃什么？</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <script type="module" src="index.js"></script>
+    <div id="app">
+        <div id="floats">
+            <div v-for="n in floatCount" v-float>{{getRandomMember(n)}}</div>
+        </div>
+        <div id="main-panel">
+            <div id="eat-what-title">{{timeLiteral}}{{eatWhatText}}</div>
+            <div id="member-to-eat-img" v-if="(!pollStatus) & showMemberImg">
+                <img :src="memberToEatImg" alt="member-to-eat-img">
+            </div>
+            <div id="member-to-eat">{{member.name}}</div>
+            <button id="poll-button" @click="startPoll">{{pollButtonText}}</button>
+        </div>
+    </div>
+</body>
+</html>

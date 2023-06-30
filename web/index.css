@@ -1,0 +1,94 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#app {
+    background-color: #eeeeee;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-panel {
+    width: min(80vw, 50rem);
+    height: min(60vh, 30rem);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#eat-what-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+#member-to-eat {
+    color: #fe963e;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1rem
+}
+
+#poll-button {
+    margin-top: 1rem;
+    background-color: #4c5564;
+    color: white;
+    border-radius: 6px;
+    height: 3rem;
+    min-width: 10rem;
+    border: none;
+    font-size: 1.1rem;
+}
+
+#poll-button:hover {
+    background-color: #5c6674;
+}
+
+#member-to-eat-img img {
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    #eat-what-title {
+        font-size: 1.5rem;
+    }
+
+    #member-to-eat {
+        font-size: 1.5rem;
+    }
+
+    #poll-button {
+        min-width: 9rem;
+        height: 2.7rem;
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #app {
+        background-color: #222222
+    }
+
+    #eat-what-title {
+        color: white;
+    }
+}
