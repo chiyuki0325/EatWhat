@@ -9,6 +9,7 @@ async def main():
     members: list[list[str]] = []
     print("正在获取群成员列表……")
     async with Client("EatWhat", config.api_id, config.api_hash) as app:
+        await app.get_dialogs()
         async for member in app.get_chat_members(config.chat_id):
             if not member.user.is_bot:
                 member_name: str = member.user.first_name
