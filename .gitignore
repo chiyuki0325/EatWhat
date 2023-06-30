@@ -4,3 +4,4 @@ web/images/*
 web/member_list.js
 .env
 EatWhat.session
+web/.vercel/
