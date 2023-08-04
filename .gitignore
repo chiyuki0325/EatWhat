@@ -3,5 +3,7 @@ venv/
 web/images/*
 web/member_list.js
 .env
-EatWhat.session
+*.session
+*.session-journal
 web/.vercel/
+__pycache__/
